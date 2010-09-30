@@ -27,7 +27,7 @@ Now, clone the repo then
   node app.js
 </pre>
 
-Then navigate to http://localhost:3000/
+Then navigate to [http://localhost:3000/](http://localhost:3000)
 
 Our demos from [Android Only](http://swdc-central.com/androidonly/) should start up.  Open the Chat or Paint demos in a couple of windows and try it out.
 
