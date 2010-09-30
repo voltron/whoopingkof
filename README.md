@@ -10,8 +10,11 @@ Installation
 
 Requirements:
 * [Node.js](http://github.com/ry/node)
+
 * [NPM](http://github.com/isaacs/npm)
+
 * [Express](http://github.com/visionmedia/express)
+
 * [node-websocket-server](http://github.com/miksago/node-websocket-server)
 
 Now, clone the repo then
