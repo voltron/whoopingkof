@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=false;" />
+    <title>
+      Chat Client
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/chat.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/websocket.js"></script>
+	<script type="text/javascript" src="js/whoopingkof.js"></script>
+	<script src="js/lawnchair/src/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lawnchair/src/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lawnchair/src/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+
+	<script type="text/javascript" src="js/chat.js"></script>
+
+  </head>
+  <body>
+    <div class="wrapper absolute">
+      <div class="container-chat">
+        <div class="container-chat-cell" id="chat-username">
+        	<div class="username-container">
+				<label for="nickname"><em>Whoop!ngkof</em>.chat</label>
+				<p>Enter your nickname and click connect to enter the chat</p>
+				<div>
+					<input name="nickname" type="text" id="nickname" value="" />
+					<button name="store-nickname" id="store-nickname" class="blue">Connect</button>
+		        </div>
+        	</div>
+        </div>
+        <div class="container-chat-cell" id="chat-users-list">
+		  <h3>Connected Users</h3>
+          <ul>
+          </ul>
+        </div>
+        <div class="container-chat-cell" id="chat-log">
+        	<h3> </h3>
+        	<div class="messages-list-container">
+		        <div class="messages-list">
+		        </div>
+        	</div>
+        </div>
+      	<div id="send-message">
+      		<div>
+            	<input type="text" name="message" id="message" value="" />
+			    <button name="send" id="send" class="green">Send</button>      		
+      		</div>
+      	</div>
+      </div>
+    </div>
+    <!-- end wrapper -->
+  </body>
+</html>

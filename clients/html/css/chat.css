@@ -1,0 +1,419 @@
+/* Global */
+html, body, div.wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.container-chat {
+	height: 100%;
+}
+
+.wrapper {
+	width: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+
+.container-chat-cell {
+	width: 33.34%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-position: top left;
+	background-repeat: repeat;
+	background-color: #d9d9d9;
+}
+
+button, button:visited {
+	display: inline;
+	padding: 6px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, .25);
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, .25);
+    cursor: pointer;
+    background-color: #c0c0c0;
+    outline: none;
+}
+
+button.green, button.green:visited {
+	background-color: #9acc02;
+	background: -webkit-gradient(linear, left top, left bottom, from(#9acc02), to(#749a02));
+	background: -moz-linear-gradient(center bottom, #9acc02, #749a02);
+}
+
+button.green:hover {
+	background-color: #a3d902;
+	background: -webkit-gradient(linear, left top, left bottom, from(#a3d902), to(#7da602));
+	background: -moz-linear-gradient(center bottom, #a3d902, #7da602);
+}
+
+button.blue, button.blue:visited {
+	background-color: #50aff3;
+	background: -webkit-gradient(linear, left top, left bottom, from(#50aff3), to(#398ade));
+	background: -moz-linear-gradient(center bottom, #50aff3, #398ade);
+}
+
+button.blue:hover {
+	background-color: #54b8ff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#54b8ff), to(#3d91eb));
+	background: -moz-linear-gradient(center bottom, #54b8ff, #3d91eb);
+}
+
+h3 {
+	background-color: #5b5b5b;
+	color: #f9f9f9;
+	font-size: 20px;
+	padding: 6px 10px;
+}
+
+input[type=button], button{
+	margin:0 auto;
+	padding: 5px;
+	min-width: 0;
+}
+
+input[type=text]{
+	font-size: 2em;
+	display: block;
+	background-color: #ddd;
+	color:#000;
+	margin:0 auto;
+	padding: 5px;
+	width:96%;
+	-webkit-border-radius: 4px;
+	letter-spacing: normal;
+}
+
+
+/* Nickname */
+.username-container {
+	display: block;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #f9f9f9;
+	max-width: 40%;
+	margin: 0 auto;
+	padding: 20px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .6);
+}
+
+.username-container label, .username-container label em {
+	font-size: 30px;
+	font-style: normal;
+	display: block;
+	padding: 0 0 5px 0;
+	letter-spacing: normal;
+}
+
+.username-container label {
+	color: #50aff3;
+}
+
+.username-container label em {
+	display: inline;
+	color: #398ade;
+}
+
+.username-container p {
+	font-size: 16px;
+	margin-bottom: 10px;
+	color: #5b5b5b;
+}
+
+.username-container div {
+	position: relative;
+	margin: 0;
+	padding: 0 130px 0 0;
+}
+
+.username-container input {
+	display: inline-block;
+	outline: none;
+	font-size: 20px;
+}
+
+.username-container button, .username-container button:visited {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 120px;
+}
+
+/* User List */
+#chat-users-list {
+	position: relative;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+#chat-users-list ul {
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#chat-users-list ul li {
+	display: block;
+	width: 100%;
+	list-style: none;
+	padding: 10px;
+	margin: 0;
+	font-size: 16px;
+	color: #5b5b5b;
+	background-color: #f9f9f9; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#e6e6e6));
+	background: -moz-linear-gradient(center bottom, #f9f9f9, #e6e6e6);
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #b3b3b3;
+}
+
+#chat-users-list ul li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #5b5b5b;
+}
+
+#chat-users-list ul li a em {
+	font-style: normal;
+	display: inline-block;
+	padding: 2px 5px;
+	margin: 0 0 0 6px;
+	font-size: 14px;
+	line-height: 14px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	color: #fff;
+	text-align: center;
+	background-color: #bf3610; 
+	display: none;
+}
+
+/* Messages */
+#chat-log .messages-list-container {
+	position: relative;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.messages-list {
+	margin: 0;
+	padding: 10px;
+}
+
+.messages-list p {
+	font-size: 20px;
+	color: #5b5b5b;
+}
+
+.messages-list blockquote {
+	position: relative;
+	padding: 10px;
+	margin: 20px 0;
+	border: 3px solid #fff;
+	font-size: 14px;
+	color: #333;
+	background: #5a8f00;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.messages-list blockquote:before {
+	position:absolute;
+	width: 0;
+	height: 0;
+	content: "";
+	bottom: -32px; /* -(:before border-top-width) - (:before border-bottom-width) */
+	border: 16px solid transparent;
+	border-top-color: #fff;
+	display: block;
+}
+
+.messages-list blockquote:after {
+	position:absolute;
+	width: 0;
+	height: 0;
+	content: "";
+	bottom: -24px; /* -(:after border-top-width) - (:after border-bottom-width) */
+	border: 12px solid transparent;
+	border-top-color: #5a8f00;
+	display: block;
+}
+
+.messages-list blockquote.self {
+	text-align: left;
+} 
+
+.messages-list blockquote.self:before {
+	left: 10px;
+}
+
+.messages-list blockquote.self:after {
+	left: 14px; /* (:before left) + (:before border-left) - (:after border-left) */
+}
+
+.messages-list blockquote.self + p {
+	text-align: left;
+	padding-left: 10px;
+}
+
+.messages-list blockquote.friend {
+	text-align: right;
+} 
+
+.messages-list blockquote.friend:before {
+	right: 10px;
+}
+
+.messages-list blockquote.friend:after {
+	right: 14px; /* (:before left) + (:before border-left) - (:after border-left) */
+}
+	
+.messages-list blockquote.friend + p {
+	text-align: right;
+	padding-right: 10px;
+}
+
+/* Message Colors */
+.messages-list blockquote.green {
+	background-color: #a2ff71;
+} 
+
+.messages-list blockquote.green:after {
+	border-top-color: #a2ff71;
+}
+
+.messages-list blockquote.blue {
+	background-color: #5bd2ff;
+} 
+
+.messages-list blockquote.blue:after {
+	border-top-color: #5bd2ff;
+}
+
+.messages-list blockquote.pink {
+	background-color: #e261ff;
+} 
+
+.messages-list blockquote.pink:after {
+	border-top-color: #e261ff;
+}
+
+.messages-list blockquote.yellow {
+	background-color: #ffec5e;
+} 
+
+.messages-list blockquote.yellow:after {
+	border-top-color: #ffec5e;
+}
+
+.messages-list blockquote.orange {
+	background-color: #ffb55e;
+} 
+
+.messages-list blockquote.orange:after {
+	border-top-color: #ffb55e;
+}
+
+.messages-list blockquote.red {
+	background-color: #ff5b5f;
+} 
+
+.messages-list blockquote.red:after {
+	border-top-color: #ff5b5f;
+}
+
+.messages-list blockquote.purple {
+	background-color: #995bff;
+} 
+
+.messages-list blockquote.purple:after {
+	border-top-color: #995bff;
+}
+
+/* Send Message */
+#send-message {
+	position: absolute;
+	width: 33.34%;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	background-color: #cbcbcb; 
+	background: -webkit-gradient(linear, left top, left bottom, from(#cbcbcb), to(#909090));
+	background: -moz-linear-gradient(center bottom, #cbcbcb, #909090);
+	border-top: 1px solid #d2d2d2;
+	border-bottom: 1px solid #818181;
+}
+
+#send-message div {
+	position: relative;
+	margin: 0;
+	padding: 10px 80px 10px 10px;
+}
+
+#send-message input {
+	display: inline-block;
+	outline: none;
+	font-size: 20px;
+}
+
+#send-message button, #send-message button:visited {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 100px;
+}
+
+/* Evo Portrait */
+@media all and (max-width: 320px){
+
+	.wrapper {
+		width: 100%;
+		padding: 0;
+		overflow: hidden;
+	}
+	
+	.username-container {
+		max-width: 80%
+	}
+
+	.username-container div {
+		padding-right: 100px;
+	}
+
+	.username-container button, .username-container button:visited {
+		font-size: 17px;
+		width: 80px;
+	}
+	
+	#send-message div {
+		padding-right: 80px;
+	}
+	
+	#send-message button, #send-message button:visited {
+		font-size: 17px;
+		width: 60px;
+	}
+	
+}

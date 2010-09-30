@@ -1,0 +1,33 @@
+.list-buttons li {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.list-buttons a, a.button{
+    -webkit-border-radius: 4px; /* Saf3+, Chrome */
+    background-color: #fff;
+    background-image: -webkit-gradient(
+    	linear,
+    	left bottom,
+    	left top,
+    	color-stop(0.02, rgb(244,247,247)),
+    	color-stop(0.45, rgb(199,199,199)),
+    	color-stop(0.85, rgb(143,140,143)),
+    	color-stop(0.0, rgb(82,80,82))
+	);
+    border: 1px solid #ddd;
+    color: #000;
+    font-size: 3em;
+    font-weight: bold;
+    display: block;
+    margin: 0 0px 0 0;
+    padding: 10px 30px 6px;
+    text-shadow: 0 -1px 0 #ddd;
+    text-align: center;
+    height:46px;	
+    letter-spacing: normal;
+}
+
+.list-buttons a:active, .list-buttons a:hover, .list-buttons a:focus, a.button:active, a.button:hover, a.button:focus {
+    background-image: none;
+}

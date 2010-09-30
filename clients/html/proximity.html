@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Proximity Alert</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/proximity.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/websocket.js"></script>
+	<script type="text/javascript" src="js/whoopingkof.js"></script>
+	<script src="js/lawnchair/src/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lawnchair/src/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lawnchair/src/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+
+	<script type="text/javascript" src="js/proximity.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<h3 class="in-proximity">&nbsp;</h3>
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr class="destination">
+			<td>Destination Latitude</td>
+			<td class="latitude"></td>
+		</tr>
+		<tr class="destination">
+			<td>Destination Longitude</td>
+			<td class="longitude"></td>
+		</tr>
+		<tr class="current">
+			<td>Current Latitude</td>
+			<td class="latitude"></td>
+		</tr>
+		<tr class="current">
+			<td>Current Longitude</td>
+			<td class="longitude"></td>
+		</tr>
+		<tr class="distance">
+			<td>Distance to Destination</td>
+			<td class="from-origin"></td>
+		</tr>
+		<tr class="distance">
+			<td>Distance Threshold</td>
+			<td class="threshold"></td>
+		</tr>
+	</table>
+	<ul class='list-buttons'>
+		<li><a href='#' class="toggle-gps">Turn GPS On</a></li>
+		<li><a href='#' class="set-origin">Set Destination</a></li>
+	</ul>
+</div>
+</body>
+</html>

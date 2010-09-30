@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Light Dimmer</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/lamp.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/websocket.js"></script>
+	<script type="text/javascript" src="js/whoopingkof.js"></script>
+	<script src="js/lawnchair/src/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lawnchair/src/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lawnchair/src/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript" src="js/lamp.js"></script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="container-lamp">
+		<header>
+			<h1>LMP CTRL 01</h1>
+		</header>
+		
+		<section class="main">
+			<nav>
+				<ul>
+					<li><a href="#" class="color selected">color</a></li>
+					<li><a href="#" class="brightness">brightness</a></li>
+					<li><a href="#" class="power">power</a></li>
+				</ul>
+			</nav>			
+			<section class="controls">
+                <section class="content color selected">
+    				<canvas id="selectH" width="80" height="361"></canvas>
+                </section>
+                <section class="content brightness">
+    				<canvas id="selectB" width="80" height="361"></canvas>
+                </section>
+                <section class="content power">
+                	<button class="on">On</button>
+                	<button class="off">Off</button>
+                </section>
+				<aside></aside>
+				<section class="current"><div></div></section>
+			</section>
+		</section>
+		
+		<footer>Lighting Control</footer>
+	</div>
+</div>
+</body>
+</html>

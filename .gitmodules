@@ -1,0 +1,3 @@
+[submodule "clients/html/js/lawnchair"]
+	path = clients/html/js/lawnchair
+	url = git://github.com/brianleroux/lawnchair.git

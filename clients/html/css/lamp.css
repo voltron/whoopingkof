@@ -1,0 +1,324 @@
+/* Global */
+html, body, div.wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #000;
+	font: normal 20px lcars;
+	color: #000;
+}
+
+.wrapper {
+	padding: 0 !important;
+}
+
+.container-lamp {
+	width: 480px;
+	height: 800px;
+	margin: 0 auto;
+}
+
+@font-face {
+  font-family: lcars;
+/*
+  src: local("Swiss911 UCm BT"), local("LCARS"),
+	   url("../fonts/lcars.ttf") format("truetype");
+*/
+  src: url("../fonts/lcars.ttf") format("truetype");
+}
+
+/* Black Bars */
+header h1:before, section.main:before, section.main:after, .current:before, .current:after {
+    position: absolute;
+	content: "";
+    top: 0;
+    display: block;
+    width: 5px;
+    height: 100%;
+    background-color: #000;
+    z-index: 0;
+}
+
+/* Header */
+header {
+    position: relative;
+	height: 60px;
+	background-color: #999;
+	padding-right: 30px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	margin-top: 10px;
+}
+
+header h1 {
+	float: right;
+	display: inline;
+	font-size: 60px;
+	color: #f8ca2d;
+	background-color: #000;
+	padding: 0 5px;
+}
+
+header h1:before {
+    left: 30px;
+}
+
+/* Header */
+footer {
+    position: relative;
+	font-size: 36px;
+	color: #f8ca2d;
+	background-color: #000;
+    text-transform: uppercase;
+	text-align: right;
+	padding-top: 4px;
+	padding-right: 42px;
+}
+
+/* Content Containers */
+section.main {
+	position: relative;
+	background-color: #8eceff;
+	padding: 6px 6px 6px 106px;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	margin-top: 10px;
+}
+
+section.main:before {
+    right: 80px;
+}
+
+section.main:after {
+    right: 50px;
+}
+
+section.controls {
+    position: relative;
+	height: 400px;
+	background-color: #000;
+	-webkit-border-radius: 26px;
+	-moz-border-radius: 26px;
+	border-radius: 26px;
+	padding: 0px 20px 0px 50px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.controls:before {
+    position: absolute;
+	content: "";
+    top: 13px;
+    left: 43px;
+    display: block;
+    width: 90px;
+    height: 371px;
+    border: solid 2px #cd9fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+/* Navigation */
+nav {
+	position: absolute;
+	top: 75px;
+	left: 0;
+	width: 106px;
+	background-color: #000;
+	padding: 0;
+	margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: block;
+    width: auto;
+    margin-bottom: 6px;
+    padding: 0;
+}
+
+nav ul li:first-child {
+    margin-top: 6px;
+}
+
+nav ul li a {  
+    display: block;
+    font-size: 28px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: right;
+    padding-top: 24px;
+    padding-right: 6px;
+    background-color: #f6dc68;
+}
+
+nav ul li a.selected {
+    background-color: #ff9800;
+}
+
+nav ul li a:active {
+    background-color: #fff;
+}
+
+/* Controls */
+.controls .content {
+    position: relative;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.controls .content canvas {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.controls aside {
+    position: absolute;
+    top: 40px;
+    left: 180px;
+    font-size: 16px;
+    color: #8eceff;
+    text-transform: uppercase;
+}
+
+.controls aside em {
+    font-style: normal;
+    color: #0e6cce;
+    margin-left: 4px; 
+}
+
+.controls aside p.selected, .controls aside p.selected em {
+    color: #fff;
+}
+
+.current {
+    position: absolute;
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    left: 180px;
+    bottom: 35px;
+    background-color: #999;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.current div {
+    height: 100%;
+    margin: 0 30px;
+}
+
+.current:before {
+    left: 25px;
+}
+
+.current:after {
+    right: 25px;
+}
+
+/* Power controls */
+.content.power {
+	height: 361px;
+}
+
+.content.power button {
+	position: absolute;
+	font: normal 40px lcars;
+	color: #f8ca2d;
+	background-color: transparent;
+	display: inline;
+	padding: 0;
+	margin: 0;
+	border: none;
+	width: 80px;
+	min-width: 0;
+}
+
+.content.power button.on {
+	top: 5px;
+}
+
+.content.power button.off {
+	bottom: 5px;
+}
+
+/* Evo Portrait */
+@media all and (max-width: 320px){
+	
+	.wrapper {
+		padding: 0;
+	}
+	
+	.container-lamp {
+		width: 320px;
+		height: 473px;
+	}
+	
+	header {
+		height: 40px;
+		padding-right: 30px;
+		-webkit-border-radius: 17px;
+		-moz-border-radius: 17px;
+		border-radius: 17px;
+		margin-top: 10px;
+	}
+	
+	header h1 {
+		font-size: 40px;
+	}
+
+	nav {
+		width: 100px;
+	}
+
+	section.main {
+		padding-left: 100px;
+	}
+	
+	section.controls {
+		padding-left: 20px;
+	}
+	
+	.controls:before {
+		left: 13px;
+	}
+	
+	.controls aside {
+	    left: 115px;
+	    font-size: 12px;
+	}
+	
+	.current {
+	    width: 90px;
+	    left: 115px;
+	    background-color: #999;
+	}
+	
+	.current div {
+	    height: 100%;
+	    margin: 0 25px;
+	}
+	
+	.current:before {
+	    left: 20px;
+	}
+	
+	.current:after {
+	    right: 20px;
+	}
+
+}

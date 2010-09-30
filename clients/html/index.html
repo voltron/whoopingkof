@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+	<title>Whoopingkof Index Page</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/websocket.js"></script>
+	<script type="text/javascript" src="js/whoopingkof.js"></script>
+	<script src="js/lawnchair/src/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lawnchair/src/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lawnchair/src/Lawnchair.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body class="index">
+
+<div class="wrapper">
+
+<div id='store-uri'>
+
+  <div class="container-form-element">
+    <label for="uri">uri:</label>
+    <input name="uri" type="text" id="uri" value="ws://205.186.154.96" />
+  </div>
+
+  <div class="container-form-element">
+    <label for="broadcast-port">broadcast port:</label>
+    <input name="broadcast-port" type="text" id="broadcast-port" value="8080" />
+  </div>
+
+  <div class="container-form-element">
+    <label for="chat-port">chat port:</label>
+    <input name="chat-port" type="text" id="chat-port" value="8081" />
+  </div>
+
+  <div class="container-form-element">
+    <label for="game-port">game port:</label>
+    <input name="game-port" type="text" id="game-port" value="8082" />
+  </div>
+
+  <div class="container-form-element">
+    <input type="button" class="rad-button" id="store" value="SAVE" />
+  </div>
+</div>
+
+<div class='hide' id='list-apps'>
+
+  <nav class='list-buttons'>
+    <a href='lamp.html'>Lamp Control.</a>
+    <a href='modernizr.html'>Modernizr.</a>
+    <a href='sos.html'>SOS.</a>
+    <a href='chat.html'>Chat.</a>
+    <a href='paint.html'>Paint.</a>
+    <a href='annotate.html'>Annotate.</a>
+  </nav>
+  
+</div>
+
+</div>
+
+</body>
+</html>

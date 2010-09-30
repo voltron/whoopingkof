@@ -1,0 +1,410 @@
+* {
+	margin:0;
+	padding:0;
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+}
+
+body {
+	background: #000;
+	color: #999;
+	font-family: "Helevetica Neue", Helvetica, "Trebuchet MS", "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	font-size: 62.5%;
+	height: 100%;
+	width: 100%;
+	margin:0 auto;
+	
+}
+
+body.index{
+	background: #78cfdc;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAf0lEQVQ4Ea3VyQ2AMAxE0UBFKQQKoSJEHTRCR2F8QAKUxctY+vLtyTdPpZREnAXWOhPBLCDak1xKKMM4kOxEBxno50IBo2gVjKBN0It2QQ86BK2oCrSgalCLmkANagZHqAvsoW6whYbAGhoG/ygFfKM08EGpoKDyTjZ0ogtR5gYQToHsUlGRXgAAAABJRU5ErkJggg==') 0 0 repeat, -webkit-gradient( linear, left bottom, left top, color-stop(0.25, rgb(120,207,220)), color-stop(0.55, rgb(144,190,230)), color-stop(0.92, rgb(201,191,248)));
+
+}
+
+
+/* Type */	
+pre {
+	border-bottom: solid 1px #ccc;
+	font: normal 1em/1em Courier;
+	color: #fff;
+	padding: 5px 0;
+	margin: 0;
+}
+
+a {
+	color: #ff0;
+	text-decoration: none;
+}
+
+p {
+	font-size: 1.8em;
+}
+
+label, input {
+	font-size: 2em;
+	display: block;
+}
+
+label{
+	font-weight: bold;
+	color:#fff;
+	letter-spacing: -3px;
+	line-height: 1.1em;
+	padding: 0 0 0 25px;
+	font-size: 6em;
+}
+
+input[type=button], button{
+	margin:0 0 0 20px;
+	padding: 5px 15px;
+	min-width: 200px;
+}
+
+input[type=text]{
+	background-color: #585d66;
+	font-weight: bold;
+	font-size: 6em;
+	letter-spacing: -3px;
+	color:#585d66;
+	margin:0 auto;
+	padding: 1px 5px;
+	width:96%;
+}
+
+li{
+	list-style-type: none;
+}
+
+h3{
+	font-size:3.6em;
+	font-weight:300;
+	font-stretch:ultra-condensed;
+}
+
+/* Content */
+
+.wrapper {
+	margin: 0 auto;
+	overflow:auto;
+}
+
+#header > h1 {
+	font-size: 3em;
+	font-weight: bold;
+	font-stretch: expanded;
+	margin: 1% auto;
+}
+
+#main {	
+	margin-top: 3em;
+}
+
+#store-uri{
+	margin-top: 100px;
+}
+
+/* Containers */
+
+.container-chat{
+	width:300%;
+	position:absolute;
+}
+
+.container-chat-cell{
+	float:left;
+	width:32.34%;
+}
+
+.container-form-element {
+	margin: 40px 0;
+}
+
+#store-uri .container-form-element, #list-apps .container-form-element{
+	margin: 0 0 20px;
+}
+
+#store-uri input[type=text], #list-apps input[type=text]{
+	background-color: #b8cae7;
+	border-bottom: 4px solid #cddaee;
+	border-bottom-style: inset;
+}
+
+.container-form-element:first-child {
+	margin: 0 0 40px 0;
+}
+
+.container-swipe-target {
+	background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.39, rgb(19,20,19)),
+    color-stop(0.8, rgb(153,156,151))
+);
+	padding:1% 0;
+	height:600px;
+}
+
+/* Utility Classes */
+.hide{
+	display: none;
+}
+
+.absolute{
+	position:absolute;
+}
+
+.list-apps{
+	margin-top: 30px;
+}
+
+.list-buttons a, a.button{
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    letter-spacing: -6px;
+    padding: 1px 10px;
+    text-align: center;
+}
+
+.list-buttons a:active, .list-buttons a:hover, .list-buttons a:focus, a.button:active, a.button:hover, a.button:focus {
+    background: #b8cae7;
+}
+
+.rad-button:active, .rad-button:hover, .rad-button:focus {
+    background-image: none;
+    background: #b8cae7;
+}
+
+.rad-button{
+    -webkit-border-radius: 4px; 
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0.1, rgb(175,191,224)), color-stop(0.22, rgb(175,191,224)),color-stop(0.44, rgb(171,187,221)), color-stop(0.66, rgb(184,202,231)),color-stop(0.96, rgb(197,212,235)), color-stop(0.8, rgb(192,208,234)));
+    border: 1px solid #000;
+    color: #fff;
+    font-size: 6em;
+    font-weight: bold;
+    display: block;
+    padding: 10px 30px 6px;
+    text-shadow: 0 -1px 0 #ddd;
+    text-align: center;
+    height:96px;	
+}
+
+/* Proximity */
+
+/* Table */
+table {
+	border: none;
+	font-size: 1.2em;
+}
+
+table td:first-child {
+	font-weight: bold;
+	padding-right: 5px;
+}
+
+.in-proximity {
+	text-align: center;
+	font-size: 3em;
+}
+
+.container-custom-menu{
+	position:absolute;
+	left:0;
+	width:100%;
+	background:transparent;
+	opacity:0;
+	display:none;
+}
+
+.container-menu-cell{
+	text-align: center;
+}
+
+.custom-menu-top .container-menu-cell{
+	background: #4C4C4C url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAALklEQVQ4je3MMQEAMAzDsHzFUP5AvacQ8s0CoKQIGGDrITCGhoaGhl+Fl3bDJA/7P7lvbtSs/QAAAABJRU5ErkJggg==') 0 0 repeat;
+	border-radius: 8px;
+	display: block;
+	margin: 10px auto;
+}
+
+
+.container-menu-cell{
+	display:inline-block;
+}
+
+.menu-label{
+	display:block;
+	text-align:center;
+	padding:10px 0 50px;
+	color: #fff;
+	font-size: 2.2em;
+	font-weight: bold;
+}
+
+.container-menu-cell:last-child .menu-label{
+	border:none;
+}
+
+.custom-menu-top{
+	top:0;
+	min-height:60px;
+}
+
+.custom-menu-bottom{
+	bottom:0;
+	min-height:60px;
+	background: #4C4C4C url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAALklEQVQ4je3MMQEAMAzDsHzFUP5AvacQ8s0CoKQIGGDrITCGhoaGhl+Fl3bDJA/7P7lvbtSs/QAAAABJRU5ErkJggg==') 0 0 repeat;
+	margin: 0 auto 20px;
+	width: 98%;
+	left:1%;
+	border-radius: 8px;
+}
+
+
+.menu-icon-flash {
+	background:transparent url('../img/icon-flash.png') no-repeat scroll bottom center;
+}
+
+.menu-icon-disc {
+	background:transparent url('../img/icon-disc.png') no-repeat scroll bottom center;
+}
+
+.menu-icon-dialog {
+	background:transparent url('../img/icon-dialog.png') no-repeat scroll bottom center;
+}
+
+.menu-icon-cloud {
+	background:transparent url('../img/icon-cloud.png') no-repeat scroll bottom center;
+}
+
+.menu-icon-sun {
+	background:transparent url('../img/icon-sun.png') no-repeat scroll bottom center;
+}
+
+.menu-icon-monitor {
+	background:transparent url('../img/icon-monitor.png') no-repeat scroll bottom center;
+}
+
+.menu-icon-globe {
+	background:transparent url('../img/icon-globe.png') no-repeat scroll bottom center;
+}
+
+
+
+/* Nexus One Landscape */
+@media all and (max-width: 533px){
+
+	.wrapper {
+		width:96%;
+		padding: 0% 2%;
+	}
+
+	.rad-button{
+		height: 48px;
+	}
+	
+	.list-buttons a{
+		display: block;
+		text-align: left;
+		letter-spacing: -2px;
+	}
+	
+	.container-chat-cell{
+		padding:10px .5% 0;
+	}
+	
+	.container-swipe-target{
+		height: 295px; /* max window height */
+	} 
+	
+	label{
+		padding: 0;
+	}
+	
+	input[type=text], label, .rad-button{
+		font-size: 3em;
+	}
+
+	.list-buttons a{
+		font-size: 4em;
+		letter-spacing: -3px;
+	}
+	
+	#store-uri, #list-apps{
+		margin-top: 30px;
+	}
+
+}
+
+
+/* Nexus One Portrait */
+@media all and (max-width: 320px){
+
+	#store-uri{
+		margin-top: 30px;
+	}
+
+	.wrapper {
+		width:96%;
+		padding: 0% 2%;
+	}
+	
+	.list-buttons a{
+		display: block;
+		text-align: left;
+		letter-spacing: -2px;
+	}
+	
+
+	.rad-button{
+		height: 48px;
+	}
+
+	h3{
+		font-size:3em;
+	}
+
+	.container-chat-cell{
+		padding:10px .5% 0;
+	}
+
+	.container-swipe-target{
+		height: 508px; /* max window height */
+	} 
+
+	input[type="button"], button {
+		margin: 0px;
+	}
+
+	label{
+		padding: 0;
+	}
+
+	input[type=text], label, .rad-button{
+		font-size: 3em;
+	}
+
+	.list-buttons a{
+		font-size: 4em;
+	}
+	
+
+}
+
+/* Desktop Browser */
+@media all and (min-width: 1024px){
+
+	.list-buttons{
+		width:600px;
+		margin: 30px auto 0;
+		text-align: center;
+	}
+
+	li{
+		list-style-type: none;
+		display:inline-block;
+		padding: 0 1%;
+	}
+	
+}
